@@ -1,7 +1,7 @@
 <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="{{ path('app_main') }}">
                 <img src="{{ asset('images/cute.png') }}" alt="cut crm logo" class="header-logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -32,6 +32,24 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link disabled">Disabled</a>
+                    </li>
+                    <li class="nav-item">
+                        {# predisposition for connection #}
+                        {# {% if app.user %}
+                            <a href="{{ path('user_view', { 'nickname' : app.user.nickname}) }}" class="nav__link">
+                                Mon profil
+                            </a>
+                            <a href="{{ path('app_logout') }}" class="nav__link">
+                                Se déconnecter
+                            </a>
+                        {% else %}
+                            <a href="{{ path('app_register') }}" class="nav__link">
+                                S'enregistrer
+                            </a>
+                            <a href="{{ path('app_login') }}" class="nav__link">
+                                Se connecter
+                            </a>
+                        {% endif %} #}
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
